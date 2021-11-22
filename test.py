@@ -19,7 +19,7 @@ def open_xl_file():
     return str(filename)
 
 def get_entry():
-    entry_value = entry_1.get()
+    entry_value = entry_2.get()
     print(entry_value)
     return entry_value
 
@@ -51,11 +51,11 @@ field_1 = tk.Text(win, width=38)
 field_1.grid(row=2, column=0, columnspan=3)
 
 scroller_1 = tk.Scrollbar(win, command=field_1.yview)
-scroller_1.grid(row=2, column=3, rowspan=3)
+scroller_1.grid(row=2, column=3, rowspan=3, columnspan=2)
 
 
 
-print(type(filename))
+
 
 win.mainloop()
 
