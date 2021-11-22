@@ -25,7 +25,7 @@ def get_entry():
 
 def insert_entry():
     global filename
-    return entry_1.insert(filename)
+    return entry_1.insert()
 
 label_1 = tk.Label(text='Выберите файл')
 label_2 = tk.Label(text='Введите марку авто')
@@ -41,13 +41,21 @@ entry_1.grid(row=0, column=1)
 entry_2 = tk.Entry()
 entry_2.grid(row=1, column=1)
 
-button_1 = tk.Button(text='...', command=lambda: (open_xl_file(), insert_entry))
+button_1 = tk.Button(text='...', command=open_xl_file)
 button_1.grid(row=0, column=2, stick='we')
 
 button_2 = tk.Button(text='Готово', command=get_entry)
 button_2.grid(row=1, column=2)
 
+field_1 = tk.Text(win, width=38)
+field_1.grid(row=2, column=0, columnspan=3)
 
+scroller_1 = tk.Scrollbar(win, command=field_1.yview)
+scroller_1.grid(row=2, column=3, rowspan=3)
+
+
+
+print(type(filename))
 
 win.mainloop()
 
