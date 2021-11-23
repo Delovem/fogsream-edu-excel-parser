@@ -30,9 +30,9 @@ def insert_entry():
     return entry_1.insert()
 
 def about_soft():
-    answer = mb.showinfo(
-        title="О Программе",
-        message="Данная программа разработана ебланом из ттк и высирает какую-то хуйню")
+    mb.showinfo(
+    title="О Программе",
+    message="Данная программа разработана ебланом из ттк и высирает какую-то хуйню")
 
 
 
