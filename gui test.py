@@ -33,7 +33,13 @@ def get_entry():
 def about_soft():
     mb.showinfo(
         title="О Программе",
-        message="Данная программа разработана ебланом из ттк и высирает какую-то хуйню")
+        message='Версия 0.1 beta'
+        '\n  '
+        '\nИсходный код: https://github.com/Delovem/fogsream-edu-excel-parser'
+        '\n  '
+        '\nДанная программа является учебным проектом и разработана в рамках обучения в компании Forgstream на курсе "Основы Python Сентябрь" в 2021 году'
+        '\n  '
+        '\nCopyright (c) Delovem software 2021-2022')
 
 
 label_1 = tk.Label(text='Выберите файл').grid(row=0, column=0)
