@@ -7,7 +7,7 @@ win = tk.Tk()
 icon =  tk.PhotoImage(file='icon.png')
 win.iconphoto(False, icon)
 win.title('carfinder v0.1 beta')
-win.geometry('320x320')
+win.geometry('305x280')
 win.resizable(False, False)
 
 
