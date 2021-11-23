@@ -47,7 +47,7 @@ button_1.grid(row=0, column=2, stick='we')
 button_2 = tk.Button(text='Готово', command=get_entry)
 button_2.grid(row=1, column=2)
 
-field_1 = tk.Text(win, width=38)
+field_1 = tk.Text(win,height=10, width=35)
 field_1.grid(row=2, column=0, columnspan=3)
 
 scroller_1 = tk.Scrollbar(win, command=field_1.yview)
