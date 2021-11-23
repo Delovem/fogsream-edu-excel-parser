@@ -25,6 +25,8 @@ def get_entry():
     print(entry_value)
     return entry_value
 
+def close_window():
+    win.destroy()
 
 # def insert_entry():
 #     global filename
@@ -55,7 +57,7 @@ entry_2.grid(row=1, column=1)
 button_1 = tk.Button(text='...', command=open_xl_file).grid(row=0, column=2, stick='we')
 button_2 = tk.Button(text='Готово', command=get_entry).grid(row=1, column=2)
 button_3 = tk.Button(text='О программе', command=about_soft).grid(row=4, column=0, stick='we')
-button_4 = tk.Button(text='Закрыть').grid(row=4, column=1, columnspan=2, stick='we')
+button_4 = tk.Button(text='Закрыть', command=close_window).grid(row=4, column=1, columnspan=2, stick='we')
 
 field_1 = tk.Text(win, height=10, width=35)
 field_1.grid(row=3, column=0, columnspan=3)
