@@ -1,5 +1,5 @@
 import openpyxl
-wb = openpyxl.load_workbook('avtovoz_cars.xlsx')
+wb = openpyxl.load_workbook('C:/Users/dkudelevich/Desktop/avtovoz_cars.xlsx')
 
 sheet = wb['Лист1']
 
