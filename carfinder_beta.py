@@ -20,7 +20,6 @@ def open_xl_file():
 
     filename = askopenfilename()
     entry_1.insert(0, filename)
-    # print(filename)
     return str(filename)
 
 
@@ -28,14 +27,13 @@ def get_entry():
     """Получает текст из поля ввода"""
     entry_value = entry_2.get()
     return entry_value
-    # field_1.insert(0.0, entry_value)
-    # print(entry_value)
+
 
 def get_entry_filename():
     """получает текст пути до файла"""
     entry_value = entry_1.get()
     return entry_value
-    # field_1.insert(0.1, entry_value)
+
 
 def excel_delaem_delo():
     wb = openpyxl.load_workbook(get_entry_filename())
@@ -50,6 +48,7 @@ def excel_delaem_delo():
         if brand.lower() == get_entry() or get_entry() in brand.lower():
             field_1.insert(0.0, (f'{brand} {model} \n'))
             print(brand, model)
+
 
 def close_window():
     """закрывает окно"""
@@ -67,21 +66,6 @@ def about_soft():
                 '\nДанная программа является учебным проектом и разработана в рамках обучения в компании Forgstream на курсе "Основы Python Сентябрь" в 2021 году'
                 '\n  '
                 '\nCopyright (c) Delovem software 2021-2022')
-
-
-# wb = openpyxl.load_workbook(open_xl_file)
-# sheet = wb['Лист1']
-#
-# row_count = sheet.max_row
-#
-#
-# def carfinder(get_entry):
-#     for row in range(1, row_count):
-#         brand = sheet[row][0].value
-#         model = sheet[row][1].value
-#
-#         if brand.lower() == get_entry or get_entry in brand.lower():
-#             print(brand, model)
 
 
 label_1 = tk.Label(text='Выберите файл').grid(row=0, column=0)
@@ -106,22 +90,3 @@ scroller_1 = tk.Scrollbar(win, command=field_1.yview)
 scroller_1.grid(row=2, column=3, rowspan=2, columnspan=2, stick='ns')
 
 win.mainloop()
-
-# wb = openpyxl.load_workbook('C:/Users/dkudelevich/Desktop/avtovoz_cars.xlsx')
-#
-#
-#
-# inp_brand = input('Введите марку авто: ').lower()
-#
-# row_count = sheet.max_row
-#
-# def carfinder(inp_brand):
-#     for row in range(1, row_count):
-#         brand = sheet[row][0].value
-#         model = sheet[row][1].value
-#
-#         if brand.lower() == inp_brand or inp_brand in brand.lower():
-#             print(brand, model)
-#
-#
-# carfinder(inp_brand)
